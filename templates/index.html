@@ -1,0 +1,139 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://hujiaming.pythonanywhere.com/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Cugar</title>
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <script type="text/javascript">
+        if (!IsPC()) {
+            window.location.href = 'http://hujiaming.pythonanywhere.com/'
+        }
+
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'new/swiper.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'new/main-pc.css' %}">
+    <style type="text/css">
+        body{
+            font-family: "楷体";
+        }
+        .video {
+            position: relative;
+            width: 70%;
+            float: left;
+            height: 683px;
+            background:url({% static 'web/image/right_down.jpg' %}) 91% 0 no-repeat;
+        }
+        
+        div.in-image {
+            width: 450px;
+            height: 451px;
+        }
+        .com-button {
+            width: 176px;
+            height: 54px;
+            line-height: 54px;
+            /* background-color: #222222; */
+            /* border: 2px solid #fff; */
+            /* border-radius: 50%; */
+             color: #000; 
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header-inner">
+                <a href="{% url 'home' %}"><img src="{% static 'web/image/logoAndroid.png' %}" class="logo"></a>
+                <div class="header-button">
+                    <a href="{% url 'static' %}" class="com-button">
+							下载
+					</a>
+                    <!-- <a href="hthttps://www.taptap.com/app/36716">
+							<img src="{% static '' %}../img/android.png">
+						</a> -->
+                    <a href="{% url 'intro' %}" class="com-button">
+							关于我们
+					</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="{% static 'web/image/banner.jpg' %}">
+        </div>
+        <div class="scomm">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-768px, 0px, 0px);">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 384px;">
+                        <img src="{% static 'web/image/slide2.jpg' %}">
+                    </div>
+                    <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 384px;">
+                        <img src="{% static 'web/image/slide1.jpg' %}">
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 384px;">
+                        <img src="{% static 'web/image/slide2.jpg' %}">
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 384px;">
+                        <img src="{% static 'web/image/slide1.jpg' %}">
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="3" style="width: 384px;">
+                        <img src="{% static 'web/image/slide2.jpg' %}">
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 384px;">
+                        <img src="{% static 'web/image/slide1.jpg' %}">
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-black"></div>
+                <div class="swiper-button-next swiper-button-black"></div>
+            </div>
+            <div class="video">
+                <!-- <div class="video-inner">
+                    <div class="in-image">
+                        <img class="intro" width="100%" src="{% static 'web/image/right_down.jpg' %}">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot-inner">
+            <span>问题反馈:gaoxit@163.com</span>
+            <br>
+            <span>Copyright ©2018 Cugar</span>
+        </div>
+    </div>
+
+    <script src="{% static 'new/swiper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'new/jquery.min.js' %}"></script>
+
+    <script type="text/javascript">
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: 3000,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+        });
+    </script>
+
+</body>
+
+</html>

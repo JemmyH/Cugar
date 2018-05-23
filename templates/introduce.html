@@ -1,0 +1,122 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://hyqs.dayukeji.com/ -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Cugar</title>
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<script type="text/javascript">
+		if(!IsPC()){
+	  	window.location.href = 'http://hyqs.dayukeji.com/'
+	  }
+	  function IsPC(){  
+	     var userAgentInfo = navigator.userAgent;  
+	     var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+	     var flag = true;  
+	     for (var v = 0; v < Agents.length; v++) {  
+	         if (userAgentInfo.indexOf(Agents[v]) > 0) { 
+	         	flag = false; 
+	         	break; 
+	         	}  
+     		}  
+     	return flag;  
+		} 
+	</script>
+	<link rel="stylesheet" type="text/css" href="{% static 'new/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'new/main-pc.css' %}">
+	<style type="text/css">
+	    body{
+	    	font-family: "楷体";
+	    }
+		.video{
+			    position: relative;
+			    width: 70%;
+			    float: left;
+			    height: 683px;
+			    background:url({% static 'web/image/05.jpg' %}) 91% 0 no-repeat;
+			}
+		div.in-image{
+			width: 450px;
+			height: 451px;
+		}
+		.com-button {
+            width: 176px;
+            height: 54px;
+            line-height: 54px;
+            /* background-color: #222222; */
+            /* border: 2px solid #fff; */
+            /* border-radius: 50%; */
+             color: #000; 
+            text-align: center;
+            font-size: 24px;
+        }
+        div.container{
+        	border: 1px solid black;
+        	text-align: center;
+            font-size: 2em;
+        }
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="header-inner">
+				<a href="{% url 'home' %}"><img src="{% static 'web/image/logoAndroid.png' %}" class="logo"></a>
+					<div class="header-button">
+						<a href="{% url 'static' %}" class="com-button">
+							下载
+						</a>
+						<!-- <a href="hthttps://www.taptap.com/app/36716">
+							<img src="{% static '' %}../img/android.png">
+						</a> -->
+						<a href="{% url 'intro' %}" class="com-button">
+							<div>
+								<img src="{% static 'web/image/about.png'%}">
+							</div>
+						</a>
+					</div>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="{% static 'web/image/banner.jpg' %}">
+		</div>
+		<div class="container">			
+			<h3>我们是几个大学生组成的小团队</h3>
+			<h3>因为游戏有了共同的梦想</h3>
+			<h3>希望我们的游戏能够给大家带来些许欢乐</h3>
+			<h3>同时也为了自身的不断成长</h3>
+
+			<h3>祝好 Cugar</h3>
+			<br><p></p>
+			<h3>微信公众号: Cugar游戏</h3>
+			<h3>官网: www.cugar.work</h3>            
+		</div>
+	</div>
+	<div class="foot">
+		<div class="foot-inner">
+			<span>问题反馈:hujm20151021@gmail.com</span>
+			<br>
+			<span>Copyright ©2018 Cugar</span>
+		</div>
+	</div>
+
+	<script src="{% static 'new/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'new/jquery.min.js' %}"></script>
+	
+	<script type="text/javascript">
+		
+		var mySwiper = new Swiper('.swiper-container',
+		{
+	    	loop: true,
+			autoplay: 3000,
+			prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+	    });
+
+	</script>
+
+</body>
+</html>

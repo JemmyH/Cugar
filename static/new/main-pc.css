@@ -1,0 +1,156 @@
+html,body,p,ul,ol,li,h1,h2,div,span,input{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+img,span,i,a,p{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.canSel{
+    -webkit-user-select: text;
+    user-select: text;
+    -webkit-touch-callout: default;
+}
+textarea{
+    -webkit-touch-callout: default;
+  -webkit-user-select: auto;
+}
+input{
+    -webkit-touch-callout: default;
+  -webkit-user-select: auto;
+}
+input[type=button]{
+  -webkit-appearance:none;
+  outline:none
+}
+
+a:focus{
+    outline: none;
+}
+img:focus{
+    outline: none;
+}
+i:focus{
+    outline: none;
+}
+span:focus{
+    outline: none;
+}
+input{
+    outline: none;
+}
+
+html,body{
+  width: 100%;
+font-size: 10px;
+font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
+min-width: 1280px;
+background-color: #4b25252e;
+}
+
+.dis{
+  display: none;
+}
+.opa{
+  opacity: 0;
+}
+.vis{
+  visibility:hidden
+}
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+.over{
+  overflow: hidden;
+}
+.wrap{
+  width: 1280px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+
+}
+.swiper-container{
+    width: 30%;
+    margin: initial;
+    float: left;
+}
+.video-inner{
+    position: absolute;
+    top: 187px;
+    left: 50px;
+}
+.swiper-slide>img{
+    width: 100%;
+}
+
+.foot{
+width: 100%;
+z-index: 200;
+line-height: 30px;
+text-align: center;
+color: #fff;
+font-size: 14px;
+letter-spacing: 2px;
+}
+.foot-inner{
+    width: 1280px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,1);
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+ 
+  
+}
+.header-inner{
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255,255,255, 0);
+}
+.logo{
+  width: 60px;
+  border-radius: 10px;
+  border:3px solid #fff;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.header-button{
+  float: right;
+  margin-right: 10px;
+  width: 20%;
+}
+.header-button>a{
+  display: inline-block;
+  width: 46%;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  float: right;
+}
+.header-button>a>img{
+  width: 100%;
+}
+.scomm{
+    overflow: hidden;
+    font-size: 0;
+}
+.banner{
+    font-size: 0;
+}
